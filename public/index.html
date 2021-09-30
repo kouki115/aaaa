@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>NoonChat v1.4</title>
+    <link rel='icon' href='/img/favicon.png' />
+    <link rel='stylesheet' href='/css/styles.css' />
+  </head>
+
+  <body>
+    <div class='centered-form'>
+      <div class='centered-form__box'>
+        <h1>NoonChat v1.4</h1>
+        <form id='join-form' action='/chat.html'>
+          <label>名前</label>
+          <input type='text' name='username' placeholder='名前を入力' autocomplete='off' required autocomplete='off'/>
+          <label for='room'>参加する部屋</label>
+          <select id='room' name='room'>
+                  <option value="ぬーんチャット">ぬーんチャット</option>
+          </select>
+          <button>チャットに参加</button>
+        </form>
+      </div>
+    </div>
+
+   <!--  <script id='room-selection-template' type='text/html'>
+      <select id='selected-room' form='join-form' onchange='getSelectedRoom(event)'>
+          <option id='placeholder-select' value='' disabled selected>Select an existing room</option>
+          {{#rooms}}
+          <option value='{{.}}'>{{.}}</option>
+          {{/rooms}}
+      </select>
+    </script> -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js'></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='js/index.js'></script>
+  </body>
+</html>
